@@ -1,0 +1,11 @@
+@import './base/reset.scss';
+@import './base/tokens.scss';
+@import './base/breakpoints.scss';
+@import './helpers/layout.scss';
+@import './helpers/colors.scss';
+@import './helpers/spacings.scss';
+@import './components/badge.scss';
+
+body {
+    font-family: $font-family-base;
+}

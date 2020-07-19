@@ -1,0 +1,91 @@
+@import '@/scss/base/tokens.scss';
+@import '@/scss/base/breakpoints.scss';
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    padding: $spacing-sm 0;
+
+    &__main {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo {
+
+        img {
+            width: 100%;
+            max-width: 150px;
+            height: auto;            
+        }
+
+    }
+
+    &__icon {
+        width: 42px;
+        height: 42px;
+        cursor: pointer;
+    }
+
+    &__menu {
+        display: none;
+        margin-top: $spacing-sm;
+        border-top: $border-width-thin $border-style-default $color-brand-3; 
+        
+        &--open {
+            display: block;
+        }
+
+        ul {
+            margin-top: $spacing-sm;
+
+            li {
+
+                a {
+                    display: block;
+                    margin: 8px 0;
+                    padding: 8px 0;                    
+                    color: $color-brand-1;
+                    font-size: 18px;
+                    font-weight: bold;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint( 768px ) {
+    .header__container--sm {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header__icon-box {
+        display: none;
+    }
+
+    .header__menu {
+        display: block;
+        margin-top: 0;
+        border-top: none;
+
+        ul {
+            display: flex;
+            margin-top: 0;
+
+            li {
+                margin: 0 $spacing-xs;
+
+                a {
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
