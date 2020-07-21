@@ -21,15 +21,15 @@
     //     }
     // }
 
-    // @if $point == $grid-md {
-    //     @media (min-width: $grid-md) {
-    //         @content;
-    //     }
+    @if $point == $grid-md {
+        @media (min-width: $grid-md) {
+            @content;
+        }
 
-    //     // @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-    //     //     @content;
-    //     // }
-    // }
+        // @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+        //     @content;
+        // }
+    }
 
     @if $point == $grid-sm {
         @media (min-width: $grid-sm) {
@@ -37,9 +37,9 @@
         }
     }
 
-    // @if $point == $grid-xs {
-    //     @media (min-width: $grid-xs) {
-    //         @content;
-    //     }
-    // }
+    @if $point == $grid-xs {
+        @media (min-width: $grid-xs) {
+            @content;
+        }
+    }
 }

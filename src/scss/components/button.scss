@@ -1,0 +1,12 @@
+@import '@/scss/base/tokens.scss';
+
+.btn {
+  background-color: $color-brand-1;
+  color: $color-brand-2;
+  font-weight: $font-weight-bold;
+  border: $border-width-thin $border-style-default $color-brand-1;
+  border-radius: $border-radius-small;
+  padding: $border-radius-small $spacing-xs;
+  outline: 0;
+  cursor: pointer;
+}

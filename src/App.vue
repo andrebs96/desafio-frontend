@@ -5,7 +5,9 @@
       iconClasses="fill-brand-1"
     >
       <template slot="logo">
-        <img alt="Tembici logo" src="./assets/logo.png">
+        <router-link to="/">
+          <img alt="Tembici logo" src="./assets/logo.png">
+        </router-link>        
       </template>
       <template slot="menu-list">  
         <ul>
@@ -26,12 +28,12 @@
         </ul>                      
       </template>
     </Header>
-    <router-view class="mt-xl pt-xxs"/>
+    <router-view class="container mt-xl pt-xs"/>
   </div>
 </template>
 
 <script>
-import Header from '@/components/widgets/Header/index.vue'
+import Header from '@/components/Header/index.vue'
 
 export default {
   components: {

@@ -1,5 +1,5 @@
 $border-style-default: solid;
-// $border-width-none: 0;
+$border-width-none: 0;
 $border-width-thin: 1px;
 // $border-width-medium: 2px;
 // $border-width-thick: 16px;
@@ -21,8 +21,8 @@ $color-brand-3: #2a2842;
 // $opacity-light: 0.16;
 // $opacity-semi-transparent: 0.08;
 
-// $border-radius-none: 0;
-// $border-radius-small: 4px;
+$border-radius-none: 0;
+$border-radius-small: 4px;
 // $border-radius-medium: 8px;
 // $border-radius-large: 24px;
 // $border-radius-pill: 500px;
@@ -41,9 +41,11 @@ $color-brand-3: #2a2842;
 
 // $shadow-spread-radius-default: 0;
 
+$spacing-xxxs: 4px;
 $spacing-xxs: 8px;
 $spacing-xs: 12px;
 $spacing-sm: 16px;
+$spacing-md: 32px;
 $spacing-xl: 64px;
 // $spacing-inline-xxxs: 4px;
 // $spacing-inline-xxs: 8px;
@@ -84,7 +86,7 @@ $font-family-base: 'Arial', sans-serif;
 
 // $font-weight-regular: 400;
 // $font-weight-medium: 700;
-// $font-weight-bold: 900;
+$font-weight-bold: bold;
 
 // $line-height-xxs: 20px;
 // $line-height-xs: 24px;
@@ -94,9 +96,9 @@ $font-family-base: 'Arial', sans-serif;
 // $line-height-xl: 72px;
 // $line-height-xxl: 80px;
 
-// $grid-xs: 576px;
+$grid-xs: 576px;
 $grid-sm: 768px;
-// $grid-md: 992px;
+$grid-md: 992px;
 // $grid-lg: 1024px;
 // $grid-xl: 1200px;
 // $grid-xxl: 1440px;

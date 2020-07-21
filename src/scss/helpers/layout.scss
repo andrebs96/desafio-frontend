@@ -1,3 +1,21 @@
 .container {
+    margin: auto;
     padding: 0 $spacing-sm;
+    max-width: 1200px;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.align-center {
+    align-items: center !important;
+}
+
+.justify-space-between {
+    justify-content: space-between !important;
+}
+
+.justify-center {
+    justify-content: center !important;
 }

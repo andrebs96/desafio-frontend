@@ -1,7 +1,24 @@
+.mt-md {
+    margin-top: $spacing-md;
+}
+
 .mt-xl {
     margin-top: $spacing-xl;
 }
 
-.pt-xxs {    
-    padding-top: $spacing-xxs;
+.mb-xxxs {
+    margin-bottom: $spacing-xxxs;
+}
+
+.mb-xl {
+    margin-bottom: $spacing-xl;
+}
+
+.my-xl {
+    margin-top: $spacing-xl;
+    margin-bottom: $spacing-xl;
+}
+
+.pt-xs {    
+    padding-top: $spacing-xs;
 }
