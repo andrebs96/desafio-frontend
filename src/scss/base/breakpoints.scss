@@ -3,32 +3,10 @@
     ***** CLASSE  ******
     *************************************/
 
-    // @if $point == $grid-xxl {
-    //     @media (min-width: $grid-xxl) {
-    //         @content;
-    //     }
-    // }
-
-    // @if $point == $grid-xl {
-    //     @media (min-width: $grid-xl) {
-    //         @content;
-    //     }
-    // }
-
-    // @if $point == $grid-lg {
-    //     @media (min-width: $grid-lg) {
-    //         @content;
-    //     }
-    // }
-
     @if $point == $grid-md {
         @media (min-width: $grid-md) {
             @content;
         }
-
-        // @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-        //     @content;
-        // }
     }
 
     @if $point == $grid-sm {

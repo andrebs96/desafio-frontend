@@ -6,6 +6,7 @@
         class="product-item" 
         v-for="(product, index) in products"
         :key="index"
+        @click="addCart(product)"
       >
         <img :src="product.image" :alt="`Produto - ${product.name}`" class="product-item__img">
         <div class="product-item__info">
@@ -34,9 +35,7 @@
 import SortBox from './features/SortBox'
 import { mdiPlusThick } from '@mdi/js';
 import {
-  mapState, 
-  // mapGetters,
-  // mapMutations,
+  mapState,
   mapActions 
 } from 'vuex'
 
@@ -93,10 +92,10 @@ export default {
     }
   },
   methods: {
-      // ...mapMutations(['marcaSelecionada']),
       ...mapActions([
         'getProducts',
-        'getMoreProductsOnTheScreen'
+        'getMoreProductsOnTheScreen',
+        'addCart'
       ]),
   }
 }

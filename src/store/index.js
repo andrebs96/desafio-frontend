@@ -10,23 +10,18 @@ export default new Vuex.Store({
     products: null,
     limit: 6,
     limitIncrement: 6,
+    cart: []
   },
   getters: {
-    // moreProductsOnTheScreen: state => {
-
-    //   if(state.allProducts) {
-
-    //     return state.allProducts.length !== state.products.length
-
-    //   }
-
-    // },
+    totalItemsCart: state => state.cart.length > 9 ? '+ 9' : state.cart.length,
+    showTotalItems: state => state.cart.length === 0 ? false : true,
   },
   mutations: {
     getAllProducts: (state, payload) => state.allProducts = payload,
     getProducts: (state, payload) => state.products = payload,
     getMoreProducts: (state, payload) => state.products.push(payload),
-    limit: (state, payload) => state.limit = payload
+    limit: (state, payload) => state.limit = payload,
+    addCart: (state, payload) => state.cart.push(payload),
   },
   actions: {
     getProducts: async ({ commit, state }) => {
@@ -73,7 +68,7 @@ export default new Vuex.Store({
       }
         
     },
-    surveyedProducts: ({state, commit}, term) => {
+    surveyedProducts: ({ state, commit }, term) => {
       
       const search = new RegExp(term, 'i')
 
@@ -92,6 +87,23 @@ export default new Vuex.Store({
         commit('getProducts', searchResult)
       }
 
+    },
+    addCart: ({ state, commit }, item) => {
+  
+      const prod = state.cart.find(itemCart => {
+
+        return item.productID === itemCart.productID
+
+      }) 
+
+      if(!prod && item.unitsInStock > 0) {
+
+        item.quantity = 1
+
+        commit('addCart', item)
+
+      }
+        
     }
   },
   modules: {

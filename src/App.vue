@@ -21,7 +21,12 @@
             <router-link to="/your-cart">
               <div>
                 Your Cart
-                <span class="badge bg-brand-1 color-brand-2">0</span>
+                <span
+                  class="badge bg-brand-1 color-brand-2" 
+                  v-if="showTotalItems"
+                >
+                  {{ totalItemsCart }}
+                </span>
               </div>
             </router-link>
           </li>
@@ -34,11 +39,20 @@
 
 <script>
 import Header from '@/components/Header/index.vue'
+import {
+  mapGetters,
+} from 'vuex'
 
 export default {
   components: {
     Header
-  }
+  },
+  computed: {
+    ...mapGetters([
+      'totalItemsCart',
+      'showTotalItems',
+    ])
+  },  
 }
 </script>
 
